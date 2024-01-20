@@ -1,21 +1,20 @@
-"use strict";
-let id = 5;
-let company = 'Google';
-let isPublished = true;
-let x = 'hello';
+var id = 5;
+var company = 'Google';
+var isPublished = true;
+var x = 'hello';
 // isPublished = 1 --> error
 // x = true --> no error
 // arrays
-let ids = [1, 2, 3, 4, 5];
-let arr = [1, true, 'hi'];
+var ids = [1, 2, 3, 4, 5];
+var arr = [1, true, 'hi'];
 //Tuples
-let person = [1, 'abcd', true];
+var person = [1, 'abcd', true];
 // Tuple arrays
-let employee = [
+var employee = [
     [1, 'a'], [2, 'b'], [3, 'c'], [4, 'd']
 ];
 // unions
-let pid;
+var pid;
 pid = 22;
 pid = '22';
 // enums
@@ -27,3 +26,11 @@ var direction1;
     direction1[direction1["right"] = 3] = "right";
 })(direction1 || (direction1 = {}));
 console.log(direction1.up);
+var direction2;
+(function (direction2) {
+    direction2["up"] = "up";
+    direction2["down"] = "d";
+    direction2["left"] = "l";
+    direction2["right"] = "r";
+})(direction2 || (direction2 = {}));
+console.log(direction2);
