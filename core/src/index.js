@@ -34,3 +34,8 @@ var direction2;
     direction2["right"] = "r";
 })(direction2 || (direction2 = {}));
 console.log(direction2);
+var user = {
+    id: 1,
+    name: 'John'
+};
+console.log(user);

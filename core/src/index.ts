@@ -34,3 +34,13 @@ enum direction2 {
 console.log(direction2);
 
 
+//objects
+type User = {
+    id: number,
+    name: string
+}
+const user: User = {
+    id: 1,
+    name: 'John'
+}
+console.log(user);
