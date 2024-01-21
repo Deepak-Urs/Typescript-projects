@@ -26,12 +26,12 @@ pid = '22'
 enum direction1 {
     up, down, left, right
 }
-console.log(direction1.up);
+//console.log(direction1.up);
 
 enum direction2 {
     up='up', down='d', left='l', right='r'
 }
-console.log(direction2);
+//console.log(direction2);
 
 
 //objects
@@ -43,4 +43,23 @@ const user: User = {
     id: 1,
     name: 'John'
 }
-console.log(user);
+//console.log(user);
+
+// Type Assertion
+let cid: any = 1
+// 1 - Method1
+let cId = <number>cid
+// 2 - Method2
+let ciD = cid as number
+
+
+// Functions
+function addNum(a: number, b:number): number {
+    return a + b
+}
+console.log(addNum(1, 2))
+
+function msg(message: string | number): void {
+    console.log(message)
+}
+msg('hello')

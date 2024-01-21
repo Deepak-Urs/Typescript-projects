@@ -25,7 +25,7 @@ var direction1;
     direction1[direction1["left"] = 2] = "left";
     direction1[direction1["right"] = 3] = "right";
 })(direction1 || (direction1 = {}));
-console.log(direction1.up);
+//console.log(direction1.up);
 var direction2;
 (function (direction2) {
     direction2["up"] = "up";
@@ -33,9 +33,23 @@ var direction2;
     direction2["left"] = "l";
     direction2["right"] = "r";
 })(direction2 || (direction2 = {}));
-console.log(direction2);
 var user = {
     id: 1,
     name: 'John'
 };
-console.log(user);
+//console.log(user);
+// Type Assertion
+var cid = 1;
+// 1 - Method1
+var cId = cid;
+// 2 - Method2
+var ciD = cid;
+// Functions
+function addNum(a, b) {
+    return a + b;
+}
+console.log(addNum(1, 2));
+function msg(message) {
+    console.log(message);
+}
+msg('hello');
