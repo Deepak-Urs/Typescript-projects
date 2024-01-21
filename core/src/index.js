@@ -53,3 +53,12 @@ function msg(message) {
     console.log(message);
 }
 msg('hello');
+var user1 = {
+    id: 1,
+    name: 'John'
+};
+var p1 = 1;
+var add = function (x, y) { return x + y; };
+var sub = function (x, y) { return x - y; };
+console.log(add(2, 3));
+console.log(sub(3, 2));
