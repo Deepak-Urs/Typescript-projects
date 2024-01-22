@@ -103,8 +103,9 @@ console.log(sub(3,2));
 
 // Classes
 class Person {
-    id: number
-    name: string
+    private id: number
+    protected name: string
+    // temp: any --> public(default)
 
     constructor(id:number, name:string) {
         this.id = id
@@ -113,3 +114,8 @@ class Person {
 }
 
 const mike = new Person(1, 'mike jordan')
+//console.log(mike.id); // Property 'id' is private and only accessible within class 'Person'.
+//console.log(mike.name); // Property 'name' is protected and only accessible within class 'Person' and its subclasses.
+
+
+
