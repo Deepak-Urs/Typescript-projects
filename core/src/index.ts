@@ -99,3 +99,17 @@ const add: MathFunc = (x:number, y:number): number => x + y
 const sub: MathFunc = (x:number, y:number): number => x - y
 console.log(add(2,3));
 console.log(sub(3,2));
+
+
+// Classes
+class Person {
+    id: number
+    name: string
+
+    constructor(id:number, name:string) {
+        this.id = id
+        this.name = name
+    }
+}
+
+const mike = new Person(1, 'mike jordan')
