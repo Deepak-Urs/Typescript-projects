@@ -101,15 +101,24 @@ console.log(add(2,3));
 console.log(sub(3,2));
 
 
+interface PersonInterface {
+    readonly id: number,
+    name: string
+    register(): string
+}
+
 // Classes
-class Person {
-    private id: number
-    protected name: string
-    // temp: any --> public(default)
+class Person implements PersonInterface {
+    id: number
+    name: string
 
     constructor(id:number, name:string) {
         this.id = id
         this.name = name
+    }
+
+    register() {
+        return `${this.name} is now registered!`
     }
 }
 
