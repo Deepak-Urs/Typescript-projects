@@ -123,8 +123,23 @@ class Person implements PersonInterface {
 }
 
 const mike = new Person(1, 'mike jordan')
+console.log(mike.register())
 //console.log(mike.id); // Property 'id' is private and only accessible within class 'Person'.
 //console.log(mike.name); // Property 'name' is protected and only accessible within class 'Person' and its subclasses.
+
+
+
+// Subclasses
+class Employee extends Person {
+    title: string
+
+    constructor(id: number, name: string, title: string) {
+        super(id, name)
+        this.title= title
+    }
+}
+const emp = new Employee(3, 'Shawn', 'Developer')
+console.log(emp.register())
 
 
 

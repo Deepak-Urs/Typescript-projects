@@ -1,3 +1,18 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var id = 5;
 var company = 'Google';
 var isPublished = true;
@@ -62,3 +77,29 @@ var add = function (x, y) { return x + y; };
 var sub = function (x, y) { return x - y; };
 console.log(add(2, 3));
 console.log(sub(3, 2));
+// Classes
+var Person = /** @class */ (function () {
+    function Person(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    Person.prototype.register = function () {
+        return "".concat(this.name, " is now registered!");
+    };
+    return Person;
+}());
+var mike = new Person(1, 'mike jordan');
+//console.log(mike.id); // Property 'id' is private and only accessible within class 'Person'.
+//console.log(mike.name); // Property 'name' is protected and only accessible within class 'Person' and its subclasses.
+// Subclasses
+var Employee = /** @class */ (function (_super) {
+    __extends(Employee, _super);
+    function Employee(id, name, title) {
+        var _this = _super.call(this, id, name) || this;
+        _this.title = title;
+        return _this;
+    }
+    return Employee;
+}(Person));
+var emp = new Employee(3, 'Shawn', 'Developer');
+console.log(emp.register());
