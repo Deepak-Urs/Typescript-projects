@@ -31,6 +31,30 @@ let totalPerson: P2 = {
 }
 console.log(totalPerson);
 
+interface P3 {
+  miscellaneous: string
+}
+
+interface P4 {
+  important: string
+}
+
+
+interface P5 extends P3, P4 {
+  remarks: string
+}
+
+interface P6 extends Person, P2 {
+  remarks: string
+}
+
+//class RegularPerson implements P5 {
+  
+//}
+
+//class SpecialPerson implements P6 {
+
+//}
 
 //function printName(name:String) {
 //  console.log(name);
