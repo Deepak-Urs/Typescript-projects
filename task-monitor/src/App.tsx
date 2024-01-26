@@ -23,6 +23,10 @@ const App: React.FC = () => {
     <div className="App">
       <span className="heading">Task Monitor</span>
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
+      {/* ToDo List */}
+      {todos.map((t) => (
+        <li>{t.todo}</li>
+      ))}
     </div>
   );
 }
