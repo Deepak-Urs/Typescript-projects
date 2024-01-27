@@ -15,6 +15,10 @@ const SingleTodo: React.FC<Props> = ({todo, todos, setTodos}) => {
             todo.id === id ? {...todo, isDone: !todo.isDone} :todo
         ));
   };
+
+  const handleDelete = (id: number) => {
+    setTodos(todos.filter(todo => todo.id !== id))
+  };
   
     return (
     <form className="todos__single">
@@ -28,7 +32,7 @@ const SingleTodo: React.FC<Props> = ({todo, todos, setTodos}) => {
         
         <div>
             <span className="icon"><AiFillEdit /></span>
-            <span className="icon"><AiFillDelete /></span>
+            <span className="icon"><AiFillDelete onClick={() => handleDelete(todo.id)} /></span>
             <span className="icon" onClick={() => handleDone(todo.id)}><MdDone /></span>
         </div>
       
